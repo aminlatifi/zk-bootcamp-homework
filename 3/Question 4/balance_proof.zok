@@ -1,0 +1,5 @@
+def main(field address, field balance1, field balance2) {
+    assert(address == 1); // Suppose the address is 0x0000000000000000000000000000000000000001
+    assert(balance1 > 0 || balance2 > 1000000000000000000);
+    return;
+}
