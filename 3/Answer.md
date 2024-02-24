@@ -44,28 +44,9 @@ I supposed address(1) has a balance of 2 ether, and generated a proof for it. Th
         }
     }
 
-```solidity
-    function verifyTx(
-            Proof memory proof, uint[1] memory input
-        ) public view returns (bool r) {
-        uint[] memory inputValues = new uint[](3);
-
-        for(uint i = 0; i < 1; i++){
-            inputValues[i] = input[i];
-        }
-
-        uint256 balance = address(1).balance;
-
-        uint128 balanceHigh = uint128(balance >> 128);
-        uint128 balanceLow = uint128(balance);
-        inputValues[1] = balanceHigh;
-        inputValues[2] = balanceLow;
-
-        if (verify(inputValues, proof) == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
 ````
+
+I was able to verify my proof, with modified input values as stated above.
+
+<img width="1088" alt="image" src="https://github.com/aminlatifi/zk-bootcamp-homework/assets/5684607/d6d71898-95d0-4b3d-b3f7-fe795dffc521">
+
