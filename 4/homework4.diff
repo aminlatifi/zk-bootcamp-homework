@@ -1,0 +1,407 @@
+diff --git a/rust/homeworks/homework4/functions/functions1.rs b/rust/homeworks/homework4/functions/functions1.rs
+index b7bbacd..65f397b 100644
+--- a/rust/homeworks/homework4/functions/functions1.rs
++++ b/rust/homeworks/homework4/functions/functions1.rs
+@@ -1,8 +1,7 @@
+ // functions1.rs
+ // Make me compile! Execute `zustlings hint functions1` for hints :)
+ 
+-// I AM NOT DONE
+-
++fn call_me() {}
+ 
+ fn main() {
+     call_me();
+diff --git a/rust/homeworks/homework4/functions/functions2.rs b/rust/homeworks/homework4/functions/functions2.rs
+index c218a31..8e77d39 100644
+--- a/rust/homeworks/homework4/functions/functions2.rs
++++ b/rust/homeworks/homework4/functions/functions2.rs
+@@ -1,13 +1,11 @@
+ // functions2.rs
+ // Make me compile! Execute `zustlings hint functions2` for hints :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     call_this(3);
+ }
+ 
+-fn call_this(num:) {
++fn call_this(num: usize) {
+     for i in 0..num {
+         println!("Loop! number {}", i + 1);
+     }
+diff --git a/rust/homeworks/homework4/functions/functions3.rs b/rust/homeworks/homework4/functions/functions3.rs
+index afeda35..5308c00 100644
+--- a/rust/homeworks/homework4/functions/functions3.rs
++++ b/rust/homeworks/homework4/functions/functions3.rs
+@@ -1,10 +1,8 @@
+ // functions3.rs
+ // Make me compile! Execute `zustlings hint functions3` for hints :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+-    call_this();
++    call_this(3);
+ }
+ 
+ fn call_this(num: u32) {
+diff --git a/rust/homeworks/homework4/functions/functions4.rs b/rust/homeworks/homework4/functions/functions4.rs
+index 8731eef..c257e0a 100644
+--- a/rust/homeworks/homework4/functions/functions4.rs
++++ b/rust/homeworks/homework4/functions/functions4.rs
+@@ -4,14 +4,12 @@
+ // This store is having a sale where if the price is an even number, you get
+ // 10 Rustbucks off, but if it's an odd number, it's 3 Rustbucks off.
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     let original_price = 51;
+     println!("Your sale price is {}", sale_price(original_price));
+ }
+ 
+-fn sale_price(price: i32) -> {
++fn sale_price(price: i32) -> i32 {
+     if is_even(price) {
+         price - 10
+     } else {
+diff --git a/rust/homeworks/homework4/functions/functions5.rs b/rust/homeworks/homework4/functions/functions5.rs
+index 2a1ed59..9121fe0 100644
+--- a/rust/homeworks/homework4/functions/functions5.rs
++++ b/rust/homeworks/homework4/functions/functions5.rs
+@@ -1,13 +1,11 @@
+ // functions5.rs
+ // Make me compile! Execute `zustlings hint functions5` for hints :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     let answer = square(3);
+     println!("The answer is {}", answer);
+ }
+ 
+ fn square(num: i32) -> i32 {
+-    num * num;
++    num * num
+ }
+diff --git a/rust/homeworks/homework4/if/if1.rs b/rust/homeworks/homework4/if/if1.rs
+index fe83c88..419684c 100644
+--- a/rust/homeworks/homework4/if/if1.rs
++++ b/rust/homeworks/homework4/if/if1.rs
+@@ -1,14 +1,16 @@
+ // if1.rs
+ 
+-// I AM NOT DONE
+-
+ pub fn bigger(a: i32, b: i32) -> i32 {
+     // Complete this function to return the bigger number!
+     // Do not use:
+     // - another function call
+     // - additional variables
+     // Execute `zustlings hint if1` for hints
+-
++    if a > b {
++        a
++    } else {
++        b
++    }
+ }
+ 
+ // Don't mind this for now :)
+diff --git a/rust/homeworks/homework4/if/if2.rs b/rust/homeworks/homework4/if/if2.rs
+index ba69dcc..45edf24 100644
+--- a/rust/homeworks/homework4/if/if2.rs
++++ b/rust/homeworks/homework4/if/if2.rs
+@@ -4,14 +4,11 @@
+ // Step 2: Get the bar_for_fuzz and default_to_baz tests passing!
+ // Execute the command `zustlings hint if2` if you want a hint :)
+ 
+-// I AM NOT DONE
+-
+ pub fn fizz_if_foo(fizzish: &str) -> &str {
+-    if fizzish == "fizz" {
+-        "foo"
+-    } 
+-    else {
+-        1
++    match fizzish {
++        "fizz" => "foo",
++        "fuzz" => "bar",
++        _ => "baz",
+     }
+ }
+ 
+diff --git a/rust/homeworks/homework4/primitive_types/primitive_types1.rs b/rust/homeworks/homework4/primitive_types/primitive_types1.rs
+index 0912139..91734c6 100644
+--- a/rust/homeworks/homework4/primitive_types/primitive_types1.rs
++++ b/rust/homeworks/homework4/primitive_types/primitive_types1.rs
+@@ -2,8 +2,6 @@
+ // Fill in the rest of the line that has code missing!
+ // No hints, there's no tricks, just get used to typing these :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     // Booleans (`bool`)
+ 
+@@ -12,7 +10,7 @@ fn main() {
+         println!("Good morning!");
+     }
+ 
+-    let // Finish the rest of this line like the example! Or make it be false!
++    let is_evening = false; // Finish the rest of this line like the example! Or make it be false!
+     if is_evening {
+         println!("Good evening!");
+     }
+diff --git a/rust/homeworks/homework4/primitive_types/primitive_types2.rs b/rust/homeworks/homework4/primitive_types/primitive_types2.rs
+index 50dea01..55cbd0f 100644
+--- a/rust/homeworks/homework4/primitive_types/primitive_types2.rs
++++ b/rust/homeworks/homework4/primitive_types/primitive_types2.rs
+@@ -2,8 +2,6 @@
+ // Fill in the rest of the line that has code missing!
+ // No hints, there's no tricks, just get used to typing these :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     // Characters (`char`)
+ 
+@@ -18,9 +16,9 @@ fn main() {
+         println!("Neither alphabetic nor numeric!");
+     }
+ 
+-    let // Finish this line like the example! What's your favorite character?
+-    // Try a letter, try a number, try a special character, try a character
+-    // from a different language than your own, try an emoji!
++    let your_character = 'خ'; // Finish this line like the example! What's your favorite character?
++                              // Try a letter, try a number, try a special character, try a character
++                              // from a different language than your own, try an emoji!
+     if your_character.is_alphabetic() {
+         println!("Alphabetical!");
+     } else if your_character.is_numeric() {
+@@ -28,4 +26,4 @@ fn main() {
+     } else {
+         println!("Neither alphabetic nor numeric!");
+     }
+-}
+\ No newline at end of file
++}
+diff --git a/rust/homeworks/homework4/primitive_types/primitive_types3.rs b/rust/homeworks/homework4/primitive_types/primitive_types3.rs
+index e1da251..7d6866f 100644
+--- a/rust/homeworks/homework4/primitive_types/primitive_types3.rs
++++ b/rust/homeworks/homework4/primitive_types/primitive_types3.rs
+@@ -2,10 +2,8 @@
+ // Create an array with at least 100 elements in it where the ??? is.
+ // Execute `zustlings hint primitive_types3` for hints!
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+-    let a = ???
++    let a = [0; 1000];
+ 
+     if a.len() >= 100 {
+         println!("Wow, that's a big array!");
+diff --git a/rust/homeworks/homework4/primitive_types/primitive_types4.rs b/rust/homeworks/homework4/primitive_types/primitive_types4.rs
+index f2209e5..2a4caec 100644
+--- a/rust/homeworks/homework4/primitive_types/primitive_types4.rs
++++ b/rust/homeworks/homework4/primitive_types/primitive_types4.rs
+@@ -2,13 +2,11 @@
+ // Get a slice out of Array a where the ??? is so that the test passes.
+ // Execute `zustlings hint primitive_types4` for hints!!
+ 
+-// I AM NOT DONE
+-
+ #[test]
+ fn slice_out_of_array() {
+     let a = [1, 2, 3, 4, 5];
+ 
+-    let nice_slice = ???
++    let nice_slice = &a[1..4];
+ 
+     assert_eq!([2, 3, 4], nice_slice)
+ }
+diff --git a/rust/homeworks/homework4/primitive_types/primitive_types5.rs b/rust/homeworks/homework4/primitive_types/primitive_types5.rs
+index 596a87f..6063538 100644
+--- a/rust/homeworks/homework4/primitive_types/primitive_types5.rs
++++ b/rust/homeworks/homework4/primitive_types/primitive_types5.rs
+@@ -2,11 +2,9 @@
+ // Destructure the `cat` tuple so that the println will work.
+ // Execute `zustlings hint primitive_types5` for hints!
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     let cat = ("Furry McFurson", 3.5);
+-    let /* your pattern here */ = cat;
++    let (name, age) = cat;
+ 
+     println!("{} is {} years old.", name, age);
+ }
+diff --git a/rust/homeworks/homework4/primitive_types/primitive_types6.rs b/rust/homeworks/homework4/primitive_types/primitive_types6.rs
+index e8a16f3..4c400de 100644
+--- a/rust/homeworks/homework4/primitive_types/primitive_types6.rs
++++ b/rust/homeworks/homework4/primitive_types/primitive_types6.rs
+@@ -3,14 +3,11 @@
+ // You can put the expression for the second element where ??? is so that the test passes.
+ // Execute `zustlings hint primitive_types6` for hints!
+ 
+-// I AM NOT DONE
+-
+ #[test]
+ fn indexing_tuple() {
+     let numbers = (1, 2, 3);
+     // Replace below ??? with the tuple indexing syntax.
+-    let second = ???;
++    let second = numbers.1;
+ 
+-    assert_eq!(2, second,
+-        "This is not the 2nd number in the tuple!")
++    assert_eq!(2, second, "This is not the 2nd number in the tuple!")
+ }
+diff --git a/rust/homeworks/homework4/strings/strings1.rs b/rust/homeworks/homework4/strings/strings1.rs
+index 91f9479..e22b147 100644
+--- a/rust/homeworks/homework4/strings/strings1.rs
++++ b/rust/homeworks/homework4/strings/strings1.rs
+@@ -2,13 +2,11 @@
+ // Make me compile without changing the function signature!
+ // Execute `zustlings hint strings1` for hints ;)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     let answer = current_favorite_course();
+     println!("My course is {}", answer);
+ }
+ 
+ fn current_favorite_course() -> String {
+-    "Solana"
++    String::from("Solana")
+ }
+diff --git a/rust/homeworks/homework4/strings/strings2.rs b/rust/homeworks/homework4/strings/strings2.rs
+index 79d1b63..26a2b17 100644
+--- a/rust/homeworks/homework4/strings/strings2.rs
++++ b/rust/homeworks/homework4/strings/strings2.rs
+@@ -2,11 +2,9 @@
+ // Make me compile without changing the function signature!
+ // Execute `zustlings hint strings2` for hints :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     let word = String::from("green"); // Try not changing this line :)
+-    if is_a_color_word(word) {
++    if is_a_color_word(word.as_str()) {
+         println!("That is a color word I know!");
+     } else {
+         println!("That is not a color word I know.");
+diff --git a/rust/homeworks/homework4/variables/variables1.rs b/rust/homeworks/homework4/variables/variables1.rs
+index 5746d2b..a95bca4 100644
+--- a/rust/homeworks/homework4/variables/variables1.rs
++++ b/rust/homeworks/homework4/variables/variables1.rs
+@@ -2,9 +2,7 @@
+ // Make me compile!
+ // Execute the command `zustlings hint variables1` if you want a hint :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+-    y = 5;
++    let y = 5;
+     println!("y has the value {}", y);
+ }
+diff --git a/rust/homeworks/homework4/variables/variables2.rs b/rust/homeworks/homework4/variables/variables2.rs
+index aaec407..0f96b26 100644
+--- a/rust/homeworks/homework4/variables/variables2.rs
++++ b/rust/homeworks/homework4/variables/variables2.rs
+@@ -1,13 +1,13 @@
++use std::default::Default;
++
+ // variables2.rs
+ // Make me compile! Execute the command `zustlings hint variables2` if you want a hint :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+-    let x;
++    let x: i32 = Default::default();
+     if x == 10 {
+         println!("x is ten!");
+     } else {
+         println!("x is not ten!");
+     }
+-}
+\ No newline at end of file
++}
+diff --git a/rust/homeworks/homework4/variables/variables3.rs b/rust/homeworks/homework4/variables/variables3.rs
+index 3c27d74..3169e13 100644
+--- a/rust/homeworks/homework4/variables/variables3.rs
++++ b/rust/homeworks/homework4/variables/variables3.rs
+@@ -1,9 +1,7 @@
+ // variables3.rs
+ // Make me compile! Execute the command `zustlings hint variables3` if you want a hint :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+-    let x: i32;
++    let x: i32 = 0;
+     println!("Number {}", x);
+-}
+\ No newline at end of file
++}
+diff --git a/rust/homeworks/homework4/variables/variables4.rs b/rust/homeworks/homework4/variables/variables4.rs
+index c4116c7..c34b032 100644
+--- a/rust/homeworks/homework4/variables/variables4.rs
++++ b/rust/homeworks/homework4/variables/variables4.rs
+@@ -1,11 +1,9 @@
+ // variables4.rs
+ // Make me compile! Execute the command `zustlings hint variables4` if you want a hint :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+-    let x = 3;
++    let mut x = 3;
+     println!("Number {}", x);
+     x = 5; // don't change this line
+     println!("Number {}", x);
+-}
+\ No newline at end of file
++}
+diff --git a/rust/homeworks/homework4/variables/variables5.rs b/rust/homeworks/homework4/variables/variables5.rs
+index f3edcf4..1e3952c 100644
+--- a/rust/homeworks/homework4/variables/variables5.rs
++++ b/rust/homeworks/homework4/variables/variables5.rs
+@@ -1,11 +1,9 @@
+ // variables5.rs
+ // Make me compile! Execute the command `zustlings hint variables5` if you want a hint :)
+ 
+-// I AM NOT DONE
+-
+ fn main() {
+     let number = "T-H-R-E-E"; // don't change this line
+     println!("Spell a Number : {}", number);
+-    number = 3; // don't rename this variable
++    let number = 3; // don't rename this variable
+     println!("Number plus two is : {}", number + 2);
+-}
+\ No newline at end of file
++}
+diff --git a/rust/homeworks/homework4/variables/variables6.rs b/rust/homeworks/homework4/variables/variables6.rs
+index 673c8ab..db8af63 100644
+--- a/rust/homeworks/homework4/variables/variables6.rs
++++ b/rust/homeworks/homework4/variables/variables6.rs
+@@ -1,9 +1,7 @@
+ // variables6.rs
+ // Make me compile! Execute the command `zustlings hint variables6` if you want a hint :)
+ 
+-// I AM NOT DONE
+-
+-const NUMBER = 3;
++const NUMBER: i32 = 3;
+ fn main() {
+     println!("Number {}", NUMBER);
+ }
